@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6494BF21-2557-45BE-B6F5-1B501B8FCF18}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>hs.lib</RootNamespace>
+    <AssemblyName>hs.lib</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="attribute\ITSM\CustomerEventInsertParam.cs" />
+    <Compile Include="attribute\ParameterAttribute.cs" />
+    <Compile Include="attribute\TS\AuthorizationParam.cs" />
+    <Compile Include="attribute\TS\AuthorizationResult.cs" />
+    <Compile Include="attribute\TS\ContactorQueryParam.cs" />
+    <Compile Include="attribute\TS\ContactorQueryResult.cs" />
+    <Compile Include="attribute\TS\CustomerQueryParam.cs" />
+    <Compile Include="attribute\TS\CustomerQueryResult.cs" />
+    <Compile Include="attribute\TS\ProductQueryParam.cs" />
+    <Compile Include="attribute\TS\ProductQueryResult.cs" />
+    <Compile Include="attribute\TS\ReCustomerProductQueryResult.cs" />
+    <Compile Include="attribute\TS\ReCustomerSaleProductQueryParam.cs" />
+    <Compile Include="attribute\TS\ReCustomerSaleProductQueryResult.cs" />
+    <Compile Include="attribute\TS\RequirementInsertParam.cs" />
+    <Compile Include="attribute\TS\RequirementInsertResult.cs" />
+    <Compile Include="attribute\TS\RequirementQueryParam.cs" />
+    <Compile Include="attribute\TS\RequirementQueryResult.cs" />
+    <Compile Include="attribute\TS\ResultBase.cs" />
+    <Compile Include="model\Employee.cs" />
+    <Compile Include="model\Product.cs" />
+    <Compile Include="model\User.cs" />
+    <Compile Include="model\yunyi\AttachFile.cs" />
+    <Compile Include="model\yunyi\BusinessSystem.cs" />
+    <Compile Include="model\yunyi\Customer.cs" />
+    <Compile Include="model\yunyi\CustomerEvent.cs" />
+    <Compile Include="model\yunyi\Feedback.cs" />
+    <Compile Include="model\yunyi\Log_ResourceDownload.cs" />
+    <Compile Include="model\yunyi\Notice.cs" />
+    <Compile Include="model\yunyi\OnlineResource.cs" />
+    <Compile Include="model\yunyi\Requirement.cs" />
+    <Compile Include="model\yunyi\Resource.cs" />
+    <Compile Include="model\yunyi\Re_Customer_BusinessSystem.cs" />
+    <Compile Include="model\yunyi\Re_Notice_Customer.cs" />
+    <Compile Include="model\yunyi\Sort.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

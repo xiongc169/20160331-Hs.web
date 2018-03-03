@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4C993481-A40F-40FE-A18F-AF418568A1E3}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>hs.console</RootNamespace>
+    <AssemblyName>hs.console</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="mef\BaseClass.cs" />
+    <Compile Include="mef\ExtendClass.cs" />
+    <Compile Include="mef\Greet.cs" />
+    <Compile Include="mef\Greet2.cs" />
+    <Compile Include="mef\IGreet.cs" />
+    <Compile Include="mef\Person.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="utility\ActivemqHelper.cs" />
+    <Compile Include="utility\AdoNetUtility.cs" />
+    <Compile Include="utility\Base64Helper.cs" />
+    <Compile Include="utility\descrypt\DESHelper.cs" />
+    <Compile Include="utility\descrypt\DESHelper2.cs" />
+    <Compile Include="utility\descrypt\DESHelper3.cs" />
+    <Compile Include="utility\descrypt\DESHelper4.cs" />
+    <Compile Include="utility\descrypt\DESHelper5.cs" />
+    <Compile Include="utility\EntityFrameworkUtility.cs" />
+    <Compile Include="utility\entityFramework\DbContextUtility.cs" />
+    <Compile Include="utility\upload\FastDFSUtility.cs" />
+    <Compile Include="utility\HttpUtility.cs" />
+    <Compile Include="utility\JsonHelper.cs" />
+    <Compile Include="utility\MailUtility.cs" />
+    <Compile Include="utility\mysql\MySQLHelper.cs" />
+    <Compile Include="utility\mysql\MysqlUtility.cs" />
+    <Compile Include="utility\NPOIHelper.cs" />
+    <Compile Include="utility\quartz\MyJob.cs" />
+    <Compile Include="utility\quartz\MySchedule.cs" />
+    <Compile Include="utility\ReflectUtility.cs" />
+    <Compile Include="utility\SQLHelper.cs" />
+    <Compile Include="utility\StopwatchUtility.cs" />
+    <Compile Include="utility\upload\UploadUtility.cs" />
+    <Compile Include="utility\upload\UploadUtility2.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App - 副本.config" />
+    <None Include="App.config" />
+    <None Include="config\log4net.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="config\quartz_jobs.xml" />
+    <Content Include="mef\readme.txt" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
